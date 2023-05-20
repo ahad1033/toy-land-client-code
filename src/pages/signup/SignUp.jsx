@@ -1,12 +1,32 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProvider";
 
 
 const SignUp = () => {
 
+    const { createUser} = useContext(AuthContext);
+
+    console.log(createUser);
+
     const handleSignUp = event => {
         event.preventDefault();
 
+        const form = event.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        const photo =  form.photo.value;
 
+        console.log(name, email, password, photo);
+        createUser(email, password)
+        .then(result => {
+            const createdUser = result.user;
+            console.log(createdUser);
+        })
+        .catch(error => {
+            console.log(error);
+        })
     }
 
     return (
@@ -23,30 +43,30 @@ const SignUp = () => {
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>
-                                <input type="text" placeholder="name" className="input input-bordered" />
+                                <input type="text" name='name' placeholder="name" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="text" placeholder="email" className="input input-bordered" />
+                                <input type="email" name='email' placeholder="email" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" placeholder="password" className="input input-bordered" />
+                                <input type="password" name='password' placeholder="password" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Photo URL</span>
                                 </label>
-                                <input type="text" placeholder="Photo URL" className="input input-bordered" />
+                                <input type="text" name='photo' placeholder="Photo URL" className="input input-bordered" />
                             </div>
                             <div className="form-control mt-6">
                                 <input className="btn btn-success font-semibold" type="submit" value="Login" />
                             </div>
-                            <p className="text-center">Already have an account? <Link className="text-lime-800 font-semibold" to='/login'>Login here</Link></p>
+                            <p className="text-center">Already have an account? <Link className="text-lime-800 font-semibold" to='/login'>Sign Up</Link></p>
                         </div>
                     </form>
                 </div>
