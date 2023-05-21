@@ -9,7 +9,7 @@ const NavBar = () => {
         <li><a>All Toys</a></li>
         <li><a>My Toys</a></li>
         <li><a>Add a Toy</a></li>
-        <li><a>Blogs</a></li>
+        <li><Link to='/blogs'>Blogs</Link></li>
     </>
 
     const {user} = useContext(AuthContext);
