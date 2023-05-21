@@ -5,6 +5,7 @@ import Login from "../pages/login/Login";
 import SignUp from "../pages/signup/SignUp";
 import ViewDetails from "../pages/viewDetails/ViewDetails";
 import Blogs from "../pages/blogs/Blogs";
+import ErrorPage from "../pages/errorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
     {
         path: '/blogs',
         element: <Blogs />
+    },
+    {
+        path: '*',
+        element: <ErrorPage></ErrorPage>
     }
 ]);
 
