@@ -1,7 +1,7 @@
 
 const AboutUs = () => {
     return (
-        <div className="lg:p-20 md:p-5 items-center bg-lime-100 m-5">
+        <div className="lg:p-20 md:p-5 items-center bg-lime-50 m-5">
             <h1 className="text-center font-bold text-3xl m-5">About Toyland</h1>
             <hr />
             <p className="font-bold lg:p-20 text-center">
