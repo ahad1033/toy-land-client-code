@@ -11,9 +11,9 @@ const NewsLetter = () => {
 
     return (
         <div className="flex flex-col md:flex-row">
-            <div className="w-full md:w-1/2">
-                <h2 className="text-center m-5 text-3xl font-bold">Subscribe to our newsletter</h2>
-                <div className="mb-2 items-center text-center">
+            <div className="w-full md:w-1/2 p-10">
+                <h2 className="text-center text-3xl font-bold mb-5">Subscribe to our newsletter</h2>
+                <div className="items-center text-center mb-5">
                     <input type="email" placeholder="Your email address" className="input input-bordered input-accent w-full max-w-xs" />
                     <button className="btn btn-wide">Subscribe</button>
                 </div>
@@ -31,14 +31,12 @@ const NewsLetter = () => {
                     </label>
                 </div>
             </div>
-            <div className="w-full md:w-1/2">
-                <div className="p-10">
-                    <h2 className="text-3xl font-bold mb-5">Address</h2>
-                    <ul className="font-bold">Corporate: Simpletree Lighthouse, Level-4, 52 Kemal Ataturk Avenue, Banani, Dhaka-1212 Bangladesh</ul>
-                    <ul className="font-bold">Factory: Mokkhopur, Trishal, Mymensingh, Bangladesh</ul>
-                    <ul className="font-bold">Email: info@toyland-bd.com</ul>
-                    <ul className="font-bold">Call Us: 01636 555 666</ul>
-                </div>
+            <div className="w-full md:w-1/2 p-10">
+                <h2 className="text-3xl font-bold mb-5">Address</h2>
+                <ul className="font-bold">Corporate: Simpletree Lighthouse, Level-4, 52 Kemal Ataturk Avenue, Banani, Dhaka-1212 Bangladesh</ul>
+                <ul className="font-bold">Factory: Mokkhopur, Trishal, Mymensingh, Bangladesh</ul>
+                <ul className="font-bold">Email: info@toyland-bd.com</ul>
+                <ul className="font-bold">Call Us: 01636 555 666</ul>
             </div>
         </div>
 
