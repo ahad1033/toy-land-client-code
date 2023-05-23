@@ -6,12 +6,12 @@ const ToysCard = ({ toys }) => {
   return (
     <div key={_id} className="border-solid border-2 border-lime-800 rounded p-2">
       <figure>
-        <img className="" src={picture} alt={name} />
+        <img className="p-5" src={picture} alt={name} />
       </figure>
-      <div className="card-body">
+      <div className="card card-body flex-grow">
         <h2 className="card-title">{name}</h2>
         <p>Seller: {seller}</p>
-        <p>Price: {price}</p>
+        <p>Price: ${price}</p>
         <p>Rating: {rating}</p>
         <p>Subcategory: {subCategory}</p>
         <div className="card-actions justify-end">
